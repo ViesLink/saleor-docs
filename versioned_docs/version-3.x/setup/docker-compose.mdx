@@ -24,11 +24,13 @@ git clone https://github.com/saleor/saleor-platform.git
 cd saleor-platform
 docker compose build
 ```
+- If you run command 'docker compose build' and an error message is reported about version, comment out or delete the line where the version claim is located in the .yml file
 
 Saleor uses shared folders to enable live code reloading. If you're using **Windows** or **MacOS** you will need to:
 
 - Add the cloned `saleor-platform` directory to the list of shared directories in Docker (_Settings_ -> _Shared Drives_ or _Preferences_ -> _Resources_ -> _File sharing_).
 - Make sure that in Docker preferences, you have dedicated at least 5 GB of memory (_Settings_ -> _Advanced_ or _Preferences_ -> _Resources_ -> _Advanced_).
+- While You are using the WSL 2 backend, so resource limits are managed by Windows.(You can skip the current step)
 
 Apply database migrations:
 
